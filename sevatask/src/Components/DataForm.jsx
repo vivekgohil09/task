@@ -81,13 +81,19 @@ export function DataForm() {
   };
 
   return (
-    <Card color="transparent" shadow={false} className="p-6">
-      <Typography variant="h4" color="blue-gray" className="text-xl font-bold mb-4">
+    <Card color="transparent" shadow={false} className="mb-5 md:w-[50%]">
+      <Typography
+        variant="h4"
+        color="blue-gray"
+        className="text-xl font-bold mb-4"
+      >
         Data Feeder Form
       </Typography>
       <form onSubmit={handleSubmit}>
         <div className="space-y-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2">Seva Date</label>
+          <label className="block text-gray-700 text-sm font-bold mb-2">
+            Seva Date
+          </label>
           <Input
             type="date"
             size="lg"
@@ -96,7 +102,9 @@ export function DataForm() {
             className="input"
           />
 
-          <label className="block text-gray-700 text-sm font-bold mb-2">KK Name (Multi-select)</label>
+          <label className="block text-gray-700 text-sm font-bold mb-2">
+            KK Name (Multi-select)
+          </label>
           <Select
             isMulti
             options={KKOptions}
@@ -105,7 +113,9 @@ export function DataForm() {
             className="select"
           />
 
-          <label className="block text-gray-700 text-sm font-bold mb-2">Yuvak Name (Multi-select)</label>
+          <label className="block text-gray-700 text-sm font-bold mb-2">
+            Yuvak Name (Multi-select)
+          </label>
           <Select
             isMulti
             options={YuvakOptions}
@@ -126,7 +136,9 @@ export function DataForm() {
 
           {isNewUser && (
             <>
-              <label className="block text-gray-700 text-sm font-bold mb-2">New User Details</label>
+              <label className="block text-gray-700 text-sm font-bold mb-2">
+                New User Details
+              </label>
               <Input
                 size="lg"
                 placeholder="New User Name"
@@ -151,7 +163,9 @@ export function DataForm() {
             </>
           )}
 
-          <label className="block text-gray-700 text-sm font-bold mb-2">Place</label>
+          <label className="block text-gray-700 text-sm font-bold mb-2">
+            Place
+          </label>
           <Select
             options={placeOptions}
             value={selectedPlace}
@@ -159,7 +173,9 @@ export function DataForm() {
             className="select"
           />
 
-          <label className="block text-gray-700 text-sm font-bold mb-2">Total Time Spent</label>
+          <label className="block text-gray-700 text-sm font-bold mb-2">
+            Total Time Spent
+          </label>
           <Select
             options={timeSpentOptions}
             value={timeSpent}
@@ -167,7 +183,9 @@ export function DataForm() {
             className="select"
           />
 
-          <label className="block text-gray-700 text-sm font-bold mb-2">Comments</label>
+          <label className="block text-gray-700 text-sm font-bold mb-2">
+            Comments
+          </label>
           <Input
             size="lg"
             placeholder="Add comments..."
