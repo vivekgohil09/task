@@ -12,8 +12,8 @@ export function Form() {
       <Typography variant="h4" color="blue-gray" className="text-center">
         Register
       </Typography>
-      <Typography color="gray" className="mt-1 mb-6 text-center text-sm">
-        Nice to meet you! Enter your details to register.
+      <Typography color="gray" className="mt-1 font-normal">
+        JSN! Das na Das
       </Typography>
       <form className="space-y-4">
         <div className="flex flex-col">
