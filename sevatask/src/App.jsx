@@ -8,6 +8,7 @@ import { Login } from "./Components/Login.jsx";
 import Admin from "./Components/Admin.jsx";
 import { DataForm } from "./Components/DataForm.jsx";
 import Navbar from "./Components/Navbar.jsx";
+import { Form } from "./Components/Form.jsx";
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
@@ -20,7 +21,8 @@ function App() {
           {/* <Switch> */}
           <Route exact path="/" component={Login} element={<Login />} />
           <Route path="/admin" component={Admin} element={<Admin />} />
-          <Route path="/registration" component={DataForm} element={<DataForm />} />
+          <Route path="/datafeeder" component={Admin} element={<DataForm />} />
+          <Route path="/registration" component={DataForm} element={<Form />} />
           {/* {isLogin === false ? (
           <div className="flex justify-center mt-10">
             <Login setIsLogin={setIsLogin} isLogin={isLogin} />
