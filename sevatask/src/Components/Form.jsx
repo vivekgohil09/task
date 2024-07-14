@@ -8,75 +8,85 @@ import {
 
 export function Form() {
   return (
-    <Card color="transparent" shadow={false}>
-      <Typography variant="h4" color="blue-gray">
-        Sign Up
+    <Card color="transparent" shadow={false} className="max-w-md mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg">
+      <Typography variant="h4" color="blue-gray" className="text-center">
+        Register
       </Typography>
-      <Typography color="gray" className="mt-1 font-normal">
+      <Typography color="gray" className="mt-1 mb-6 text-center text-sm">
         Nice to meet you! Enter your details to register.
       </Typography>
-      <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
-        <div className="mb-1 flex flex-col gap-6">
-          <Typography variant="h6" color="blue-gray" className="-mb-3">
+      <form className="space-y-4">
+        <div className="flex flex-col">
+          <Typography variant="h6" color="blue-gray">
             Full Name
           </Typography>
           <Input
             size="lg"
             placeholder="John Doe"
-            className="!border-t-blue-gray-200 focus:!border-t-gray-900"
+            className="input"
             labelProps={{
               className: "before:content-none after:content-none",
             }}
           />
-          <Typography variant="h6" color="blue-gray" className="-mb-3">
+        </div>
+        <div className="flex flex-col">
+          <Typography variant="h6" color="blue-gray">
             Phone Number
           </Typography>
           <Input
             size="lg"
             placeholder="123-456-7890"
-            className="!border-t-blue-gray-200 focus:!border-t-gray-900"
+            className="input"
             labelProps={{
               className: "before:content-none after:content-none",
             }}
           />
-          <Typography variant="h6" color="blue-gray" className="-mb-3">
+        </div>
+        <div className="flex flex-col">
+          <Typography variant="h6" color="blue-gray">
             Date of Birth
           </Typography>
           <Input
             type="date"
             size="lg"
-            className="!border-t-blue-gray-200 focus:!border-t-gray-900"
+            className="input"
             labelProps={{
               className: "before:content-none after:content-none",
             }}
           />
-          <Typography variant="h6" color="blue-gray" className="-mb-3">
+        </div>
+        <div className="flex flex-col">
+          <Typography variant="h6" color="blue-gray">
             Address
           </Typography>
           <Input
             size="lg"
             placeholder="123 Main St, City, Country"
-            className="!border-t-blue-gray-200 focus:!border-t-gray-900"
+            className="input"
             labelProps={{
               className: "before:content-none after:content-none",
             }}
           />
-          <Typography variant="h6" color="blue-gray" className="-mb-3">
+        </div>
+        <div className="flex flex-col">
+          <Typography variant="h6" color="blue-gray">
             Reference Name
           </Typography>
           <Input
             size="lg"
             placeholder="Jane Doe"
-            className="!border-t-blue-gray-200 focus:!border-t-gray-900"
+            className="input"
             labelProps={{
               className: "before:content-none after:content-none",
             }}
           />
-          <Typography variant="h6" color="blue-gray" className="-mb-3">
+        </div>
+        <div className="flex flex-col">
+          <Typography variant="h6" color="blue-gray">
             User Type
           </Typography>
           <select
-            className="!border-t-blue-gray-200 focus:!border-t-gray-900 bg-white py-2 px-3 rounded-md shadow-sm text-sm"
+            className="input"
             defaultValue=""
           >
             <option value="" disabled>
@@ -85,11 +95,13 @@ export function Form() {
             <option value="KK">KK</option>
             <option value="Yuvak">Yuvak</option>
           </select>
-          <Typography variant="h6" color="blue-gray" className="-mb-3">
+        </div>
+        <div className="flex flex-col">
+          <Typography variant="h6" color="blue-gray">
             User Designation
           </Typography>
           <select
-            className="!border-t-blue-gray-200 focus:!border-t-gray-900 bg-white py-2 px-3 rounded-md shadow-sm text-sm"
+            className="input"
             defaultValue=""
           >
             <option value="" disabled>
@@ -99,6 +111,7 @@ export function Form() {
             <option value="Working Prof">Working Prof</option>
           </select>
         </div>
+
         <Checkbox
           label={
             <Typography
@@ -115,17 +128,11 @@ export function Form() {
               </a>
             </Typography>
           }
-          containerProps={{ className: "-ml-2.5" }}
+          containerProps={{ className: "-ml-2.5 mt-4" }}
         />
         <Button className="mt-6" fullWidth>
           Sign Up
         </Button>
-        <Typography color="gray" className="mt-4 text-center font-normal">
-          Already have an account?{" "}
-          <a href="#" className="font-medium text-gray-900">
-            Sign In
-          </a>
-        </Typography>
       </form>
     </Card>
   );
