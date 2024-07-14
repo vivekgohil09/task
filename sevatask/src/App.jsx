@@ -1,19 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { Button } from '@material-tailwind/react'
-import Admin from './Components/Admin'
-import Navbar from './Components/Navbar'
+import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+
+import { Login } from "./Components/Login.jsx";
+import Admin from "./Components/Admin.jsx";
+import { DataForm } from "./Components/DataForm.jsx";
+import Navbar from "./Components/Navbar.jsx";
 
 function App() {
+  const [isLogin, setIsLogin] = useState(false);
 
   return (
     <>
       <Navbar />
-      <Admin />
+      <div  className="flex mt-10 px-10">
+        <Routes>
+          {/* <Switch> */}
+          <Route exact path="/" component={Login} element={<Login />} />
+          <Route path="/admin" component={Admin} element={<Admin />} />
+          <Route path="/registration" component={DataForm} element={<DataForm />} />
+          {/* {isLogin === false ? (
+          <div className="flex justify-center mt-10">
+            <Login setIsLogin={setIsLogin} isLogin={isLogin} />
+          </div>
+        ) : (
+          <div className="md:w-[50%]">
+            <DataForm />
+          </div>
+        )} */}
+          {/* <Admin /> */}
+          {/* </Switch> */}
+        </Routes>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
